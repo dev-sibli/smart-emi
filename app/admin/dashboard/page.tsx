@@ -58,7 +58,7 @@ export default function AdminDashboard() {
       color: "yellow",
     },
     {
-      title: "Total Revenue",
+      title: "Total EMI Amount",
       value: "BDT 45,2000",
       change: "+15.3%",
       trend: "up",
