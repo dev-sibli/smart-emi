@@ -59,7 +59,7 @@ export default function AdminDashboard() {
     },
     {
       title: "Total Revenue",
-      value: "৳45.2M",
+      value: "BDT 45,2000",
       change: "+15.3%",
       trend: "up",
       icon: DollarSign,
