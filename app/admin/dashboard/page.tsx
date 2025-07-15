@@ -31,7 +31,7 @@ import Link from "next/link"
 export default function AdminDashboard() {
   const stats = [
     {
-      title: "Total Applications",
+      title: "Total Number of Applications",
       value: "1,247",
       change: "+12.5%",
       trend: "up",
@@ -40,7 +40,7 @@ export default function AdminDashboard() {
       color: "blue",
     },
     {
-      title: "Approved Applications",
+      title: "Total Number of Approved Applications",
       value: "892",
       change: "+8.2%",
       trend: "up",
@@ -49,7 +49,7 @@ export default function AdminDashboard() {
       color: "green",
     },
     {
-      title: "Pending Review",
+      title: "Total Number of Pending Application",
       value: "234",
       change: "-5.1%",
       trend: "down",
@@ -67,7 +67,7 @@ export default function AdminDashboard() {
       color: "purple",
     },
     {
-      title: "Active Stores",
+      title: "Active Merchants",
       value: "28",
       change: "+2",
       trend: "up",
