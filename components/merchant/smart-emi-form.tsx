@@ -30,6 +30,7 @@ export function SmartEmiForm() {
     clientId: "",
     amount: "",
     tenure: "",
+    approvalCode: "",
     notes: "",
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
@@ -74,6 +75,10 @@ export function SmartEmiForm() {
       newErrors.tenure = "Tenure is required"
     }
 
+    if (!formData.approvalCode.trim()) {
+      newErrors.approvalCode = "Approval code is required"
+    }
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -101,7 +106,7 @@ export function SmartEmiForm() {
         status: "pending",
         store: "Tech World", // In a real app, this would come from the current user's store
         merchant: "Current Merchant", // In a real app, this would come from auth context
-        approvalCode: "",
+        approvalCode: formData.approvalCode,
         notes: formData.notes,
         timeline: [
           {
@@ -121,7 +126,7 @@ export function SmartEmiForm() {
 
       toast({
         title: "Application Submitted",
-        description: `EMI application ${newApplication.id} has been submitted successfully.`,
+        description: `EMI application ${newApplication.id} has been submitted successfully with approval code ${formData.approvalCode}.`,
       })
 
       // Reset form
@@ -133,6 +138,7 @@ export function SmartEmiForm() {
         clientId: "",
         amount: "",
         tenure: "",
+        approvalCode: "",
         notes: "",
       })
 
@@ -263,6 +269,17 @@ export function SmartEmiForm() {
                   </SelectContent>
                 </Select>
                 {errors.tenure && <p className="text-sm text-red-600">{errors.tenure}</p>}
+              </div>
+
+              <div className="space-y-2">
+                <Label htmlFor="approvalCode">Approval Code *</Label>
+                <Input
+                  id="approvalCode"
+                  value={formData.approvalCode}
+                  onChange={(e) => handleInputChange("approvalCode", e.target.value)}
+                  placeholder="Enter approval code"
+                />
+                {errors.approvalCode && <p className="text-sm text-red-600">{errors.approvalCode}</p>}
               </div>
             </div>
 
