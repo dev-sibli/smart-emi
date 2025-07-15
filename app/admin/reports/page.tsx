@@ -173,19 +173,19 @@ export default function ReportsPage() {
                           <td className="px-4 py-2">Electronics Store</td>
                           <td className="px-4 py-2">18</td>
                           <td className="px-4 py-2">72%</td>
-                          <td className="px-4 py-2">₹8,50,000</td>
+                          <td className="px-4 py-2">8,50,000</td>
                         </tr>
                         <tr className="border-b">
                           <td className="px-4 py-2">Home Appliances</td>
                           <td className="px-4 py-2">15</td>
                           <td className="px-4 py-2">60%</td>
-                          <td className="px-4 py-2">₹6,75,000</td>
+                          <td className="px-4 py-2">6,75,000</td>
                         </tr>
                         <tr>
                           <td className="px-4 py-2">Mobile Shop</td>
                           <td className="px-4 py-2">12</td>
                           <td className="px-4 py-2">50%</td>
-                          <td className="px-4 py-2">₹4,20,000</td>
+                          <td className="px-4 py-2">4,20,000</td>
                         </tr>
                       </tbody>
                     </table>
@@ -226,7 +226,7 @@ export default function ReportsPage() {
                                 ? "Home Appliances"
                                 : "Mobile Shop"}
                           </td>
-                          <td className="px-4 py-2">₹{(Math.floor(Math.random() * 90000) + 10000).toLocaleString()}</td>
+                          <td className="px-4 py-2">{(Math.floor(Math.random() * 90000) + 10000).toLocaleString()}</td>
                           <td className="px-4 py-2">
                             {new Date(
                               new Date().setDate(new Date().getDate() - Math.floor(Math.random() * 30)),
